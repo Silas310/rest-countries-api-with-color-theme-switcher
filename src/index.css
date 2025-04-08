@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
+@import "tailwindcss/preflight";
 @import "tailwindcss";
+
 
 
 *{
@@ -12,4 +14,13 @@
 img {
   display: block;
   max-width: 100%;
+}
+
+:root {
+  --color-dark-element: hsl(209, 23%, 22%);
+  --color-dark-bg: hsl(207, 26%, 17%);
+  --color-light-text: hsl(200, 15%, 8%);
+  --color-light-input: hsl(0, 0%, 52%);
+  --color-light-bg: hsl(0, 0%, 98%);
+  --color-light-element: hsl(0, 0%, 100%);
 }
