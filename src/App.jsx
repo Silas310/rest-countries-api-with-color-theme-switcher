@@ -1,11 +1,12 @@
 import "../src/index.css"
+import Header from "../src/components/Header"
 
 function App() {
 
   return (
-    <div className=''>
-      Ola
-    </div>
+    <main>
+      <Header />
+    </main>
   )
 }
 
