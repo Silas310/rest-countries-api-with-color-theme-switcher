@@ -4,9 +4,11 @@ import Header from "../src/components/Header"
 function App() {
 
   return (
-    <main>
-      <Header />
-    </main>
+    <div className="flex justify-center w-screen h-screen">
+      <main className="text-(length:--font-size-home) flex flex-col w-full">
+        <Header />
+      </main>
+    </div>
   )
 }
 

@@ -1,9 +1,7 @@
 @charset "UTF-8";
 
-@import "tailwindcss/preflight";
+
 @import "tailwindcss";
-
-
 
 
 @font-face {
@@ -13,10 +11,8 @@
   font-style: normal;
 }
 
-*{
+*, *::before, *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 img {
@@ -24,15 +20,14 @@ img {
   max-width: 100%;
 }
 
-:root {
+@theme {
   --color-dark-element: hsl(209, 23%, 22%);
   --color-dark-bg: hsl(207, 26%, 17%);
   --color-light-text: hsl(200, 15%, 8%);
   --color-light-input: hsl(0, 0%, 52%);
   --color-light-bg: hsl(0, 0%, 98%);
   --color-light-element: hsl(0, 0%, 100%);
-}
 
-body {
-  font-family: 'Nunito Sans', sans-serif;
+  --font-size-home: clamp(0.875rem, 0.893vw + 0.6rem, 1.5rem); /* or 0.875rem */
+  --font-size-detail: clamp(1rem, 0.893vw + 0.821rem, 1.625rem); /* or 1rem */
 }
