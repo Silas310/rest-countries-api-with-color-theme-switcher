@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <header className="w-full flex justify-between items-center shadow px-4 py-8 bg-white">
+    <header className="w-full flex justify-between items-center shadow min-[4rem]:px-4 py-8 bg-white">
       <h1 className="font-bold">Where in the world?</h1>
       <button className="flex items-center space-x-2">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" className="w-3.5 h-3.5 md:w-4 md:h-4">
