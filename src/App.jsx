@@ -1,6 +1,7 @@
 import "../src/index.css"
-import Header from "../src/components/Header"
+import Header from "./components/Header"
 import Search from "./components/Search"  
+import Filter from "./components/Filter"
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <main className="text-(length:--font-size-home) flex flex-col w-full bg-light-bg">
         <Header />
         <Search />
+        <Filter/>
       </main>
     </div>
   )
