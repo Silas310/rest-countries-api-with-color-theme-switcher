@@ -1,22 +1,13 @@
-import { useState } from "react"
-
-
 function Filter() {
-  let [visibility, setVisibility] = useState("hidden")
-
-
-  function handleVisibility() {
-    if (visibility === "hidden") {
-      setVisibility("block")
-    } else {
-      setVisibility("hidden")
-    }
-  }
-  
   return (
-    <div>
-      <label htmlFor="region" className="bg-white py-4 border" onClick={handleVisibility}>Filter by region</label>
-      <select name="region" className={visibility}>
+    <div className="flex w-1/2">
+      <label htmlFor="region" className="sr-only">Filter By Region</label>
+      <select name="region" id="region" className="flex-1 bg-white rounded-md py-4 shadow-[1px_1px_10px_rgba(0,0,0,0.10)]">
+        <button>
+          <selectedcontent></selectedcontent>
+        </button>
+
+        <option value="">Filter By Region</option>
         <option value="africa">Africa</option>
         <option value="america">America</option>
         <option value="asia">Asia</option>
@@ -24,7 +15,6 @@ function Filter() {
         <option value="oceania">Oceania</option>
       </select>
     </div>
-    
   )
 }
 
