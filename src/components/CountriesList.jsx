@@ -5,7 +5,6 @@ function CountriesList({ data, error, isLoading }) {
   if (error) return <div>Error loading countries</div>;
   if (isLoading) return <div>Loading...</div>;
   if (!data) return <div>No countries found</div>;
-  console.log(data[1].flags);
   
   return (
     <section className='flex flex-col items-center gap-y-10'>
