@@ -8,7 +8,7 @@ function Filter() {
           <selectedcontent></selectedcontent>
         </button>
 
-        <option value="" className="hidden">Filter By Region</option>
+        <option value="" className="hidden">Filter by Region</option>
         <option value="africa">Africa</option>
         <option value="america">America</option>
         <option value="asia">Asia</option>
