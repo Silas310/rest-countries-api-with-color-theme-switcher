@@ -8,7 +8,7 @@ function CountriesList({ data, error, isLoading }) {
   console.log(data[1].flags);
   
   return (
-    <section>
+    <section className='flex flex-col items-center gap-y-10'>
       {data.map((country) => (
         <Card
           key={country.cca3}
