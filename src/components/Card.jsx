@@ -1,7 +1,7 @@
-function Card({flag, name, population, region, capital}) {
+function Card({flag, altFlag, name, population, region, capital}) {
   return (
     <section>
-      <img src={flag} alt="flag" />
+      <img src={flag} alt={altFlag} />
       <h2>{name}</h2>
       <p>Population: {population}</p>
       <p>Region: {region}</p>
