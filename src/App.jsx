@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="flex justify-center w-screen h-screen">
-      <main className="text-(length:--font-size-home) flex flex-col w-full bg-light-bg gap-6">
+      <main className="text-(length:--font-size-home) flex flex-col w-full bg-light-bg gap-6 dark:bg-dark-bg">
         <Header />
         <Form />
         <CountriesList data={data} error={error} isLoading={isLoading}/>
