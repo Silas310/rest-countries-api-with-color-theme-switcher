@@ -21,6 +21,15 @@ function Filter() {
       </select>
     </div>*/
 
+    <div className='flex w-[60%]'>
+      <Select.Root >
+        <Select.Trigger className="flex justify-between items-center w-full">
+          <Select.Value>Filter by Region</Select.Value>
+          <Select.Icon></Select.Icon>
+        </Select.Trigger>
+      
+      </Select.Root>
+    </div>
   )
 }
 
