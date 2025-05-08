@@ -4,29 +4,31 @@ import * as Select from '@radix-ui/react-select';
 
 function Filter() {
   return (
-    /*<div className="flex w-[60%]">
-      <label htmlFor="region" className="sr-only">Filter By Region</label>
-      <select name="region" id="region" 
-      className="flex-1 bg-white rounded-md py-4 shadow-[1px_1px_10px_rgba(0,0,0,0.10)] px-6 cursor-pointer max-w-[24rem]">
-        <button>
-          <selectedcontent></selectedcontent>
-        </button>
 
-        <option value="" className="hidden">Filter by Region</option>
-        <option value="africa">Africa</option>
-        <option value="america">America</option>
-        <option value="asia">Asia</option>
-        <option value="europe">Europe</option>
-        <option value="oceania">Oceania</option>
-      </select>
-    </div>*/
-
-    <div className='flex w-[60%]'>
+    <div className='flex w-[60%] max-w-[22rem]'>
       <Select.Root >
-        <Select.Trigger className="flex justify-between items-center w-full">
-          <Select.Value>Filter by Region</Select.Value>
-          <Select.Icon></Select.Icon>
+        <Select.Trigger className="flex justify-between items-center 
+          w-full p-4 rounded-md dark:bg-dark-element dark:text-white cursor-pointer">
+          
+          <Select.Value placeholder="Filter by Region" />
+          <Select.Icon />
         </Select.Trigger>
+
+        <Select.Portal>
+          <Select.Content sideOffset={5} position='popper' className='w-[var(--radix-select-trigger-width)]'>
+
+            <Select.Viewport className='bg-white dark:bg-dark-element dark:text-white rounded-md'>
+              <Select.Group>
+                <Select.Item value="africa" className="cursor-pointer hover:bg-gray-200 px-4 py-2"><Select.ItemText>Africa</Select.ItemText></Select.Item>
+                <Select.Item value="america" className="cursor-pointer hover:bg-gray-200 px-4 py-2"><Select.ItemText>America</Select.ItemText></Select.Item>
+                <Select.Item value="asia" className="cursor-pointer hover:bg-gray-200 px-4 py-2"><Select.ItemText>Asia</Select.ItemText></Select.Item>
+                <Select.Item value="europe" className="cursor-pointer hover:bg-gray-200 px-4 py-2"><Select.ItemText>Europe</Select.ItemText></Select.Item>
+                <Select.Item value="oceania" className="cursor-pointer hover:bg-gray-200 px-4 py-2"><Select.ItemText>Oceania</Select.ItemText></Select.Item>
+              </Select.Group>
+            </Select.Viewport>
+
+          </Select.Content>
+        </Select.Portal>
       
       </Select.Root>
     </div>

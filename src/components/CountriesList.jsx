@@ -7,7 +7,7 @@ function CountriesList({ data, error, isLoading }) {
   if (!data) return <div>No countries found</div>;
   
   return (
-    <section className='flex flex-col items-center gap-y-10'>
+    <section className='flex flex-col items-center gap-y-10 dark:bg-dark-bg'>
       {data.map((country) => (
         <Card
           key={country.cca3}
