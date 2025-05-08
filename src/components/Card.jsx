@@ -1,6 +1,6 @@
 function Card({flag, altFlag, name, population, region, capital}) {
   return (
-    <section className="bg-white rounded-lg shadow-2xl max-w-[18rem]">
+    <section className="bg-white dark:bg-dark-element dark:text-white rounded-lg shadow-2xl max-w-[18rem]">
       <img src={flag} alt={altFlag} className="rounded-t-lg"/>
       <div className="p-5 pb-12">
         <h2 className="text-[1.2rem] font-bold mb-3">{name}</h2>
