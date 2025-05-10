@@ -23,12 +23,22 @@ function ThemeToggleButton() {
   }
 
 
+  const getMediaQueryTheme = () => {
+    const mql = window.matchMedia("(prefers-color-scheme: dark)");
+    const hasPreference = typeof mql.matches === "boolean"
+    if (hasPreference) {
+      return mql.matches ? "dark" : "light";
+    }
+  }
+
+  console.log("theme", theme);
+  
   useEffect(() => {
     const userTheme = getUserTheme();
-    if (userTheme) {
-      setTheme(userTheme);
-      document.documentElement.classList.add(userTheme);
-    } 
+    const mediaQueryTheme = getMediaQueryTheme();
+    const initialTheme = userTheme || mediaQueryTheme || "light";
+    setTheme(initialTheme);
+    document.documentElement.classList.add(initialTheme);
   }, [theme])
 
 
