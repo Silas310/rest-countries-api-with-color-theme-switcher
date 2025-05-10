@@ -1,15 +1,35 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 function ThemeToggleButton() {
-  const [theme, setTheme] = useState("light")
-  const handleToggle = () => {
-    const newTheme = theme === "light" ? "dark" : "light"
-    setTheme(newTheme)
-    document.documentElement.classList.remove(theme)
-    document.documentElement.classList.add(newTheme)
+  const [theme, setTheme] = useState("light");
 
+
+  const handleToggle = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    storeUserTheme(newTheme);
+    document.documentElement.classList.remove(theme);
+    document.documentElement.classList.add(newTheme);
   } 
+
+  const storeUserTheme = (userTheme) => {
+    localStorage.setItem("theme", userTheme);
+  }
+
+
+  const getUserTheme = () => {
+    return localStorage.getItem("theme");
+  }
+
+
+  useEffect(() => {
+    const userTheme = getUserTheme();
+    if (userTheme) {
+      setTheme(userTheme);
+      document.documentElement.classList.add(userTheme);
+    } 
+  }, [theme])
 
 
   return (
@@ -21,5 +41,6 @@ function ThemeToggleButton() {
   </button>
   )
 }
+
 
 export default ThemeToggleButton
