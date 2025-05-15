@@ -10,10 +10,19 @@ const fetcher = (...args) => fetch(...args).then(res => res.json())
 
 
 function App() {
-  const [filterValue, setFilterValue] = useState('');
   const [searchValue, setSearchValue] = useState('');
-  const { data, error, isLoading } = useSWR("https://restcountries.com/v3.1/alpha?codes=DE,US,BR,IS,AF,AX,AL,DZ", fetcher)
+  const [filterValue, setFilterValue] = useState('');
 
+  const baseURL = "https://restcountries.com/v3.1/";
+  let endpoint = "alpha?codes=DE,US,BR,IS,AF,AX,AL,DZ";
+
+  if (searchValue) {
+    endpoint = `name/${searchValue}`;
+  } else if (filterValue) {
+    endpoint = `region/${filterValue}`;
+  } 
+
+  const { data, error, isLoading } = useSWR(baseURL + endpoint, fetcher)
 
   return (
     <div className="flex justify-center w-screen h-screen">

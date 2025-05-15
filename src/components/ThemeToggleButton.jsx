@@ -31,7 +31,6 @@ function ThemeToggleButton() {
     }
   }
 
-  console.log("theme", theme);
   
   useEffect(() => {
     const userTheme = getUserTheme();
