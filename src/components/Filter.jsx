@@ -2,11 +2,11 @@ import * as Select from '@radix-ui/react-select';
 
 
 
-function Filter() {
+function Filter({onChange}) {
   return (
 
     <div className='flex w-[60%] max-w-[22rem]'>
-      <Select.Root >
+      <Select.Root onValueChange={onChange}>
         <Select.Trigger className="flex justify-between items-center 
           w-full p-4 rounded-md dark:bg-dark-element dark:text-white cursor-pointer">
           
