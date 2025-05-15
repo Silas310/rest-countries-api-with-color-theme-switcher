@@ -1,6 +1,5 @@
 import Filter from "./Filter"
 import Search from "./Search"
-import { useState } from "react"
 
 
 function Form({filterValue, setFilterValue, searchValue, setSearchValue}) { 
@@ -9,14 +8,19 @@ function Form({filterValue, setFilterValue, searchValue, setSearchValue}) {
   function handleFilterChange(value) {
     if ( validRegions.includes(value) ) {
       setFilterValue(value);
-      console.log(value);
     }
+  } 
+
+  function handleSearchChange(event) {
+    setSearchValue(event.target.value);
+    console.log(event.target.value);
+    
   }
 
   return (
     <form action="" className="flex flex-col gap-15 px-4">
-      <Search searchValue={searchValue} setSearchValue={setSearchValue} />
-      <Filter onChange={handleFilterChange} value={filterValue} />
+      <Search searchValue={searchValue} onChange={handleSearchChange} />
+      <Filter value={filterValue} onChange={handleFilterChange}  />
     </form>
   )
 }
