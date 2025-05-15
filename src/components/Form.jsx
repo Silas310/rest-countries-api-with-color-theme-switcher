@@ -3,9 +3,7 @@ import Search from "./Search"
 import { useState } from "react"
 
 
-function Form() { 
-  const [filterValue, setFilterValue] = useState('');
-  const [searchValue, setSearchValue] = useState('');
+function Form({filterValue, setFilterValue, searchValue, setSearchValue}) { 
   const validRegions = ['africa', 'america', 'asia', 'europe', 'oceania'];
 
   function handleFilterChange(value) {
@@ -17,8 +15,8 @@ function Form() {
 
   return (
     <form action="" className="flex flex-col gap-15 px-4">
-      <Search />
-      <Filter onChange={handleFilterChange}/>
+      <Search searchValue={searchValue} setSearchValue={setSearchValue} />
+      <Filter onChange={handleFilterChange} value={filterValue} />
     </form>
   )
 }
