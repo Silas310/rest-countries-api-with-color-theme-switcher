@@ -6,9 +6,13 @@ import { useState } from "react"
 function Form() { 
   const [filterValue, setFilterValue] = useState('');
   const [searchValue, setSearchValue] = useState('');
+  const validRegions = ['africa', 'america', 'asia', 'europe', 'oceania'];
 
   function handleFilterChange(value) {
-    console.log(value);
+    if ( validRegions.includes(value) ) {
+      setFilterValue(value);
+      console.log(value);
+    }
   }
 
   return (
