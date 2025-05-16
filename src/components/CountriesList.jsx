@@ -1,12 +1,13 @@
 import Card from './Card';
 import Loading from './Loading';
 import ErrorAlert from './ErrorAlert';
+import NoResults from './NoResults';  
 
 
 function CountriesList({ data, error, isLoading }) {
   if (error) return <ErrorAlert />;
   if (isLoading) return <Loading />;
-  if (!data) return <div>No countries found</div>;
+  if (!data) return <NoResults />;
   
   return (
     <section className='flex flex-col items-center gap-y-10 dark:bg-dark-bg'>
