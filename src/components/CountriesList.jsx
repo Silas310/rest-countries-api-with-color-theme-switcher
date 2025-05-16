@@ -1,9 +1,10 @@
 import Card from './Card';
 import Loading from './Loading';
+import ErrorAlert from './ErrorAlert';
 
 
 function CountriesList({ data, error, isLoading }) {
-  if (error) return <div>Error loading countries</div>;
+  if (error) return <ErrorAlert />;
   if (isLoading) return <Loading />;
   if (!data) return <div>No countries found</div>;
   
