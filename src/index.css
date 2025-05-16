@@ -2,7 +2,7 @@
 
 
 @import "tailwindcss";
-
+@plugin "daisyui";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
