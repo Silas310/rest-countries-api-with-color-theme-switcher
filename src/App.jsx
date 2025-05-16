@@ -15,7 +15,6 @@ const fetcher = async (...args) => {
 }
 
 
-
 function App() {
   const [searchValue, setSearchValue] = useState('');
   const [filterValue, setFilterValue] = useState('');
