@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="flex justify-center w-screen h-screen">
-      <main className="flex flex-col w-full gap-6 bg-light-bg text-[length:--font-size-home] dark:bg-dark-bg">
+      <main className="flex flex-col w-full gap-6 bg-light-bg text-light-text dark:bg-dark-bg">
         <Header />
         <Routes>
           <Route
