@@ -15,7 +15,6 @@ function CountriesList({ data, error, isLoading }) {
       {data.map((country) => (
         <Link key={country.cca3} to={`/country/${country.cca3}`}>
           <Card
-            key={country.cca3}
             flag={country.flags.png}
             altFlag={country.flags.alt}
             name={country.name.common}

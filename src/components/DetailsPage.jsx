@@ -14,9 +14,10 @@ function DetailsPage() {
 
   if (error) return <ErrorAlert msg={"Error fetching data"}/>
   if (isLoading) return <Loading />
-  if (!data) return <NoResults msg={"No country found"}/>
+  if (!data || data.length === 0) return <NoResults msg={"No country found"}/>
 
   console.log(data[0]);
+  const country = data[0];
   
 
   return (
@@ -26,26 +27,26 @@ function DetailsPage() {
       </nav>
 
       <main>
-        <img src={data[0].flags.png} alt="country flag"/>
+        <img src={country.flags?.png} alt="country flag"/>
 
-        <h1>{data[0].name.common}</h1> {/*Country name*/ }
+        <h1>{country.name.common}</h1> {/*Country name*/ }
 
         <div>
-          <p><strong className="font-semibold">Native name: </strong> { Object.values(data[0].name.nativeName).map(n => n.common).join(", ")}</p>
-          <p><strong className="font-semibold">Population: </strong> {data[0].population.toLocaleString("pt-BR")}</p>
-          <p><strong className="font-semibold">Region: </strong> {data[0].region}</p>
-          <p><strong className="font-semibold">Sub Region:</strong> {data[0].subregion}</p>
-          <p><strong className="font-semibold">Capital:</strong> {data[0].capital}</p>
+          <p><strong className="font-semibold">Native name: </strong> { Object.values(country.name.nativeName).map(n => n.common).join(", ")}</p>
+          <p><strong className="font-semibold">Population: </strong> {country.population.toLocaleString("pt-BR")}</p>
+          <p><strong className="font-semibold">Region: </strong> {country.region}</p>
+          <p><strong className="font-semibold">Sub Region:</strong> {country.subregion}</p>
+          <p><strong className="font-semibold">Capital:</strong> {country.capital}</p>
         </div>
 
         <div>
-          <p><strong className="font-semibold">Top Level Domain:</strong> {data[0].tld.join(" - ")}</p>
-          <p><strong className="font-semibold">Currencies:</strong> {Object.values(data[0].currencies).map(c => c.name).join(", ")}</p>
-          <p><strong className="font-semibold">Languages:</strong> {Object.values(data[0].languages).join(", ")}</p>
+          <p><strong className="font-semibold">Top Level Domain:</strong> {country.tld.join(" - ")}</p>
+          <p><strong className="font-semibold">Currencies:</strong> {Object.values(country.currencies).map(c => c.name).join(", ")}</p>
+          <p><strong className="font-semibold">Languages:</strong> {Object.values(country.languages).join(", ")}</p>
         </div>
 
         <section>
-          <h2>Border countries: {data[0].borders.join(", ")}</h2>
+          <h2>Border countries: {country.borders?.join(", ")}</h2>
         </section>
 
       </main>
