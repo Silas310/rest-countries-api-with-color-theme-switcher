@@ -8,7 +8,7 @@ function Filter({value, onChange}) {
     <div className='flex w-[60%] max-w-[22rem]'>
       <Select.Root onValueChange={onChange} value={value}>
         <Select.Trigger className="flex justify-between items-center 
-          w-full p-4 rounded-md dark:bg-dark-element dark:text-white cursor-pointer">
+          w-full p-4 rounded-md dark:bg-dark-element dark:text-white bg-white cursor-pointer shadow-md">
           
           <Select.Value placeholder="Filter by Region" />
           <Select.Icon />
@@ -17,7 +17,7 @@ function Filter({value, onChange}) {
         <Select.Portal>
           <Select.Content sideOffset={5} position='popper' className='w-[var(--radix-select-trigger-width)]'>
 
-            <Select.Viewport className='bg-white dark:bg-dark-element dark:text-white rounded-md'>
+            <Select.Viewport className='bg-white text-light-text dark:bg-dark-element dark:text-white rounded-md'>
               <Select.Group>
                 <Select.Item value="africa" className="cursor-pointer hover:bg-gray-200 px-4 py-2"><Select.ItemText>Africa</Select.ItemText></Select.Item>
                 <Select.Item value="america" className="cursor-pointer hover:bg-gray-200 px-4 py-2"><Select.ItemText>America</Select.ItemText></Select.Item>
