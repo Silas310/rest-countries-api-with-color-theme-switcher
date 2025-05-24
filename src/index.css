@@ -23,7 +23,7 @@ img {
   max-width: 100%;
 }
 
-@theme {
+@theme{
   --color-dark-element: hsl(209, 23%, 22%);
   --color-dark-bg: hsl(207, 26%, 17%);
   --color-light-text: hsl(200, 15%, 8%);
@@ -33,4 +33,7 @@ img {
 
   --font-size-home: clamp(0.875rem, 0.893vw + 0.6rem, 1.5rem); /* or 0.875rem */
   --font-size-detail: clamp(1rem, 0.893vw + 0.821rem, 1.625rem); /* or 1rem */
+
+  --my-shadow: 1px 1px 10px rgba(1, 1, 10, 0.30);
+  --my-shadow-dark: 1px 1px 10px rgba(0, 0, 0, 0.60);
 }

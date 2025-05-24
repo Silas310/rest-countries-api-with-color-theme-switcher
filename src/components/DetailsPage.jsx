@@ -21,17 +21,24 @@ function DetailsPage() {
   
 
   return (
-    <main>
-      <nav>
-        <button>Back</button>
+    <main className="dark:text-light-bg text-light-text p-4 bg-inherit">
+      <nav className="justify-self-start">
+        <button className="px-6 bg-white dark:bg-dark-element shadow-(--my-shadow) dark:shadow-(--my-shadow-dark) py-2 rounded-sm">Back</button>
       </nav>
 
-      <main>
-        <img src={country.flags?.png} alt="country flag"/>
+      <section className="flex flex-col gap-y-8">
+        <div className="w-full max-w-xl aspect-[4/3] overflow-hidden">
+          <img
+            src={country.flags?.png}
+            alt={country.flags?.alt}
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-        <h1>{country.name.common}</h1> {/*Country name*/ }
 
-        <div>
+        <h1 className="text-2xl font-semibold">{country.name.common}</h1> {/*Country name*/ }
+
+        <div className="flex flex-col gap-y-2">
           <p><strong className="font-semibold">Native name: </strong> { Object.values(country.name.nativeName).map(n => n.common).join(", ")}</p>
           <p><strong className="font-semibold">Population: </strong> {country.population.toLocaleString("pt-BR")}</p>
           <p><strong className="font-semibold">Region: </strong> {country.region}</p>
@@ -39,7 +46,7 @@ function DetailsPage() {
           <p><strong className="font-semibold">Capital:</strong> {country.capital}</p>
         </div>
 
-        <div>
+        <div className="flex flex-col gap-y-2">
           <p><strong className="font-semibold">Top Level Domain:</strong> {country.tld.join(" - ")}</p>
           <p><strong className="font-semibold">Currencies:</strong> {Object.values(country.currencies).map(c => c.name).join(", ")}</p>
           <p><strong className="font-semibold">Languages:</strong> {Object.values(country.languages).join(", ")}</p>
@@ -49,7 +56,7 @@ function DetailsPage() {
           <h2>Border countries: {country.borders?.join(", ")}</h2>
         </section>
 
-      </main>
+      </section>
     </main>
   )
 }
