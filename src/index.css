@@ -39,5 +39,5 @@ img {
 }
 
 .box {
-  @apply bg-white dark:bg-dark-element shadow-(--my-shadow) dark:shadow-(--my-shadow-dark)
+  @apply bg-white dark:bg-dark-element shadow-(--my-shadow) dark:shadow-(--my-shadow-dark) rounded-sm
 }

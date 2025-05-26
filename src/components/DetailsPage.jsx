@@ -18,12 +18,13 @@ function DetailsPage() {
 
   console.log(data[0]);
   const country = data[0];
+  const borderCountries = country.borders || [];
   
 
   return (
     <main className="dark:text-light-bg text-light-text p-4 bg-inherit">
       <nav className="justify-self-start">
-        <button className="px-6 box py-2 rounded-sm">Back</button>
+        <button className="px-6 box py-2">Back</button>
       </nav>
 
       <section className="flex flex-col gap-y-8">
@@ -53,7 +54,18 @@ function DetailsPage() {
         </div>
 
         <section>
-          <h2>Border countries: {country.borders?.join(", ")}</h2>
+          <h2>Border countries: </h2>
+          <ul className="flex flex-wrap gap-2 mt-4">
+            {borderCountries.length > 0 ? (
+              borderCountries.map((border) => (
+                <li key={border} className="box px-2">
+                  {border}
+                </li>
+              ))
+            ) : (
+              <li className="text-gray-500">No border countries</li>
+            )}
+          </ul>
         </section>
 
       </section>
