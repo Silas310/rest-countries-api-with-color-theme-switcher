@@ -37,3 +37,7 @@ img {
   --my-shadow: 1px 1px 10px rgba(1, 1, 10, 0.30);
   --my-shadow-dark: 1px 1px 10px rgba(0, 0, 0, 0.60);
 }
+
+.box {
+  @apply bg-white dark:bg-dark-element shadow-(--my-shadow) dark:shadow-(--my-shadow-dark)
+}
