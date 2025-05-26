@@ -23,7 +23,7 @@ function DetailsPage() {
   
 
   return (
-    <main className="dark:text-light-bg text-light-text p-4 bg-inherit">
+    <main className="dark:text-light-bg text-light-text p-4 bg-inherit flex flex-col gap-y-8">
       <nav className="justify-self-start">
         <Link to="/">
           <button className="px-6 box py-1 rounded-sm cursor-pointer"> ← Back</button>
