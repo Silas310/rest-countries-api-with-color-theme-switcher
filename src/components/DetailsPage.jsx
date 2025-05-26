@@ -26,7 +26,7 @@ function DetailsPage() {
     <main className="dark:text-light-bg text-light-text p-4 bg-inherit">
       <nav className="justify-self-start">
         <Link to="/">
-          <button className="px-6 box py-2 rounded-sm cursor-pointer">Back</button>
+          <button className="px-6 box py-1 rounded-sm cursor-pointer"> ← Back</button>
         </Link>
       </nav>
 
