@@ -4,6 +4,7 @@ import fetcher from "../lib/fetcher.js";
 import Loading from "./Loading";
 import ErrorAlert from "./ErrorAlert";
 import NoResults from "./NoResults";
+import { Link } from "react-router-dom";
 
 
 function DetailsPage() {
@@ -24,7 +25,9 @@ function DetailsPage() {
   return (
     <main className="dark:text-light-bg text-light-text p-4 bg-inherit">
       <nav className="justify-self-start">
-        <button className="px-6 box py-2 rounded-sm">Back</button>
+        <Link to="/">
+          <button className="px-6 box py-2 rounded-sm cursor-pointer">Back</button>
+        </Link>
       </nav>
 
       <section className="flex flex-col gap-y-8">
