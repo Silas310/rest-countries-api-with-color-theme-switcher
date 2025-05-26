@@ -24,7 +24,7 @@ function DetailsPage() {
   return (
     <main className="dark:text-light-bg text-light-text p-4 bg-inherit">
       <nav className="justify-self-start">
-        <button className="px-6 box py-2">Back</button>
+        <button className="px-6 box py-2 rounded-sm">Back</button>
       </nav>
 
       <section className="flex flex-col gap-y-8">
@@ -55,7 +55,7 @@ function DetailsPage() {
 
         <section>
           <h2>Border countries: </h2>
-          <ul className="flex flex-wrap gap-2 mt-4">
+          <ul className="flex flex-wrap gap-2 mt-2">
             {borderCountries.length > 0 ? (
               borderCountries.map((border) => (
                 <li key={border} className="box px-2">
