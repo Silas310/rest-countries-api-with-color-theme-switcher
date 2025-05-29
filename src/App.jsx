@@ -1,5 +1,5 @@
 import "../src/index.css";
-import { useState } from "react";
+import { useState, useEffect, use } from "react";
 import { Routes, Route } from "react-router-dom";
 import useSWR from "swr";
 
@@ -11,13 +11,21 @@ import fetcher from "./lib/fetcher.js";
 
 function App() {
   const [searchValue, setSearchValue] = useState('');
+  const [debouncedSearchValue, setDebouncedSearchValue] = useState('');
   const [filterValue, setFilterValue] = useState('');
+
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      setDebouncedSearchValue(searchValue);
+    }, 500);
+    return () => clearTimeout(delay);
+  })
 
   const baseURL = "https://restcountries.com/v3.1/";
   let endpoint = "alpha?codes=DE,US,BR,IS,AF,AX,AL,DZ";
 
-  if (searchValue) {
-    endpoint = `name/${searchValue}`;
+  if (debouncedSearchValue) {
+    endpoint = `name/${debouncedSearchValue}`;
   } else if (filterValue) {
     endpoint = `region/${filterValue}`;
   }
