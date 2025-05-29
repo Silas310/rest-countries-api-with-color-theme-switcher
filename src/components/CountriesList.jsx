@@ -23,10 +23,10 @@ function CountriesList({ data, error, isLoading }) {
             capital={country.capital ? country.capital[0] : "No capital"}
           />
         </Link>
-        
       ))}
     </section>
   )
 }
+
 
 export default CountriesList;

@@ -22,6 +22,31 @@ function DetailsPage() {
   const borderCountries = country.borders || [];
   
 
+  const primaryInfo = [
+    { label: "Native name", value: Object.values(country.name.nativeName).map(n => n.common).join(", ") },
+    { label: "Population", value: country.population.toLocaleString("pt-BR") },
+    { label: "Region", value: country.region },
+    { label: "Sub Region", value: country.subregion },
+    { label: "Capital", value: country.capital ? country.capital[0] : "No capital" }
+  ];
+  console.log(country.capital);
+  
+
+  const secondaryInfo = [
+    {
+      label: "Top Level Domain",
+      values: country.tld,
+    },
+    {
+      label: "Currencies",
+      values: Object.values(country.currencies).map(c => c.name),
+    },
+    {
+      label: "Languages",
+      values: Object.values(country.languages),
+    },
+  ];
+
   return (
     
     <main className="dark:text-light-bg text-light-text p-4 sm:p-8 bg-inherit flex 
@@ -47,16 +72,18 @@ function DetailsPage() {
           <h1 className="text-2xl font-semibold">{country.name.common}</h1> {/*Country name*/ }
           <div className="flex flex-col gap-y-6 [@media(min-width:80rem)]:flex-row [@media(min-width:80rem)]:gap-x-8">
             <div className="flex flex-col gap-y-2">
-              <p><strong className="font-semibold">Native name: </strong> { Object.values(country.name.nativeName).map(n => n.common).join(", ")}</p>
-              <p><strong className="font-semibold">Population: </strong> {country.population.toLocaleString("pt-BR")}</p>
-              <p><strong className="font-semibold">Region: </strong> {country.region}</p>
-              <p><strong className="font-semibold">Sub Region:</strong> {country.subregion}</p>
-              <p><strong className="font-semibold">Capital:</strong> {country.capital}</p>
+              {primaryInfo.map((item, index) => (
+                <p key={index}>
+                  <strong className="font-semibold">{item.label}:</strong> {item.value}
+                </p>
+              ))}
             </div>
             <div className="flex flex-col gap-y-2">
-              <p><strong className="font-semibold">Top Level Domain:</strong> {country.tld.join(" - ")}</p>
-              <p><strong className="font-semibold">Currencies:</strong> {Object.values(country.currencies).map(c => c.name).join(", ")}</p>
-              <p><strong className="font-semibold">Languages:</strong> {Object.values(country.languages).join(", ")}</p>
+              {secondaryInfo.map(({ label, values }) => (
+                <p key={label}>
+                  <strong className="font-semibold">{label}:</strong> {values.join(", ")}
+                </p>
+              ))}
             </div>
           </div>
           
