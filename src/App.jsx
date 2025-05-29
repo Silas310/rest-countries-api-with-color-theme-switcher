@@ -24,8 +24,10 @@ function App() {
   const baseURL = "https://restcountries.com/v3.1/";
   let endpoint = "alpha?codes=DE,US,BR,IS,AF,AX,AL,DZ";
 
-  if (debouncedSearchValue) {
-    endpoint = `name/${debouncedSearchValue}`;
+  const formattedSearchValue = encodeURIComponent(debouncedSearchValue.trim().replace(/\s+/g, ' '));
+
+  if (formattedSearchValue) {
+    endpoint = `name/${formattedSearchValue}`;
   } else if (filterValue) {
     endpoint = `region/${filterValue}`;
   }
