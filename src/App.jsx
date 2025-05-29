@@ -25,7 +25,7 @@ function App() {
   const { data, error, isLoading } = useSWR(baseURL + endpoint, fetcher);
 
   return (
-    <div className="flex justify-center w-screen h-screen">
+    <div className="flex justify-center w-screen min-h-screen">
       <main className="flex flex-col w-full gap-6 bg-light-bg text-light-text dark:bg-dark-bg">
         <Header />
         <Routes>
