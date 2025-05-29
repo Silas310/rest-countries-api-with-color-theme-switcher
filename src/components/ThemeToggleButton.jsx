@@ -38,7 +38,7 @@ function ThemeToggleButton() {
     const initialTheme = userTheme || mediaQueryTheme || "light";
     setTheme(initialTheme);
     document.documentElement.classList.add(initialTheme);
-  }, [theme])
+  }, [])
 
 
   return (
