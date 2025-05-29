@@ -1,5 +1,5 @@
 import "../src/index.css";
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import useSWR from "swr";
 
