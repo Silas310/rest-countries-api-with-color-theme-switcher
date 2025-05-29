@@ -17,6 +17,7 @@ const getMediaQueryTheme = () => {
   if (hasPreference) {
     return mql.matches ? "dark" : "light";
   }
+  return null;
 }
 
 function ThemeToggleButton() {
