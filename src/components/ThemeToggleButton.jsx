@@ -1,6 +1,24 @@
 import { useEffect, useState } from "react"
 
 
+const storeUserTheme = (userTheme) => {
+  localStorage.setItem("theme", userTheme);
+}
+
+
+const getUserTheme = () => {
+  return localStorage.getItem("theme");
+}
+
+
+const getMediaQueryTheme = () => {
+  const mql = window.matchMedia("(prefers-color-scheme: dark)");
+  const hasPreference = typeof mql.matches === "boolean"
+  if (hasPreference) {
+    return mql.matches ? "dark" : "light";
+  }
+}
+
 function ThemeToggleButton() {
   const [theme, setTheme] = useState("light");
 
@@ -11,27 +29,9 @@ function ThemeToggleButton() {
     storeUserTheme(newTheme);
     document.documentElement.classList.remove(theme);
     document.documentElement.classList.add(newTheme);
-  } 
-
-  const storeUserTheme = (userTheme) => {
-    localStorage.setItem("theme", userTheme);
   }
 
 
-  const getUserTheme = () => {
-    return localStorage.getItem("theme");
-  }
-
-
-  const getMediaQueryTheme = () => {
-    const mql = window.matchMedia("(prefers-color-scheme: dark)");
-    const hasPreference = typeof mql.matches === "boolean"
-    if (hasPreference) {
-      return mql.matches ? "dark" : "light";
-    }
-  }
-
-  
   useEffect(() => {
     const userTheme = getUserTheme();
     const mediaQueryTheme = getMediaQueryTheme();
