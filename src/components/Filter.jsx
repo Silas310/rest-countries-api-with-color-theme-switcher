@@ -5,7 +5,7 @@ import * as Select from '@radix-ui/react-select';
 function Filter({value, onChange}) {
   return (
 
-    <div className='flex w-[60%] max-w-[22rem]'>
+    <div className='flex w-[60%] max-w-[14rem]'>
       <Select.Root onValueChange={onChange} value={value}>
         <Select.Trigger className="flex justify-between items-center 
           w-full p-4 rounded-md dark:bg-dark-element dark:text-white bg-white cursor-pointer shadow-md">
