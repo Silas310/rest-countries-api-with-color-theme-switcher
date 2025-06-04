@@ -11,7 +11,8 @@ function CountriesList({ data, error, isLoading }) {
   if (!data) return <NoResults />;
   
   return (
-    <section className='flex flex-col items-center gap-y-10 bg-light-bg dark:bg-dark-bg'>
+    <section className='flex flex-col items-center gap-y-10 bg-light-bg dark:bg-dark-bg 
+    lg:grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 lg:gap-6 lg:p-12'>
       {data.map((country) => (
         <Link key={country.cca3} to={`/country/${country.cca3}`}>
           <Card

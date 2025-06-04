@@ -42,7 +42,7 @@ function App() {
           <Route
             path="/"
             element={
-              <div className="flex flex-col gap-6 lg:p-12">
+              <div className="flex flex-col gap-6 lg:px-10 lg:py-6">
                 <Form
                   searchValue={searchValue}
                   setSearchValue={setSearchValue}
