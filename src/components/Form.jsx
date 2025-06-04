@@ -16,7 +16,7 @@ function Form({filterValue, setFilterValue, searchValue, setSearchValue}) {
   }
 
   return (
-    <form className="flex flex-col gap-15 px-4">
+    <form className="flex flex-col gap-15 max-lg:px-4">
       <Search searchValue={searchValue} onChange={handleSearchChange} />
       <Filter value={filterValue} onChange={handleFilterChange}  />
     </form>
