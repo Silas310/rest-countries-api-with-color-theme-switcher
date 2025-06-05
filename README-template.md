@@ -33,3 +33,10 @@ Aplicação web feita com React que consome a [REST Countries API](https://restc
 - Tailwind CSS
 - Radix UI
 - React Router DOM
+
+## 📚 Referências e Guias Utilizados
+
+- [How to Create Dark Mode in React Without Using React Context](https://www.makeuseof.com/react-dark-mode-without-context/)
+- [A Complete Guide to React Router: Everything You Need to Know](https://ui.dev/react-router-tutorial)
+- [React’s Filter Component: A Comprehensive Guide](https://medium.com/%40utkarsh.gupta0311/reacts-filter-component-a-comprehensive-guide-b457a9b6dd2b)
+- [Constructing Search & Filter Functionality in React 🦄](https://dev.to/laurentyson85/constructing-search-filter-functionality-in-react-dnd)
