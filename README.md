@@ -1,12 +1,42 @@
-# React + Vite
+# 🌍 REST Countries API with Theme Switcher
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web feita com React que consome a [REST Countries API](https://restcountries.com/). Permite buscar países, filtrar por região, visualizar detalhes e alternar entre tema claro e escuro.
 
-Currently, two official plugins are available:
+## 📸 Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> print
 
-## Expanding the ESLint configuration
+## 🚀 Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Busca dinâmica por nome de país
+- Filtro por região (usando Radix UI)
+- Exibição de detalhes do país selecionado
+- Lista de países de fronteira com links
+- Suporte a tema claro/escuro
+- Mensagens de loading e erro
+- Navegação entre páginas com React Router
+
+## 🧠 Aprendizados
+
+- Uso do React Router para rotas dinâmicas
+- Gerenciamento de estado com hooks e SWR
+- Organização de componentes reutilizáveis
+- Estilização com Tailwind CSS
+- Acessibilidade com Radix UI
+- Boas práticas de código limpo e DRY
+
+## 🛠️ Tecnologias
+
+- React
+- Vite
+- SWR
+- Tailwind CSS
+- Radix UI
+- React Router DOM
+
+## 📚 Referências e Guias Utilizados
+
+- [How to Create Dark Mode in React Without Using React Context](https://www.makeuseof.com/react-dark-mode-without-context/)
+- [A Complete Guide to React Router: Everything You Need to Know](https://ui.dev/react-router-tutorial)
+- [React’s Filter Component: A Comprehensive Guide](https://medium.com/%40utkarsh.gupta0311/reacts-filter-component-a-comprehensive-guide-b457a9b6dd2b)
+- [Constructing Search & Filter Functionality in React 🦄](https://dev.to/laurentyson85/constructing-search-filter-functionality-in-react-dnd)
