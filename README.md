@@ -4,7 +4,7 @@ Aplicação web feita com React que consome a [REST Countries API](https://restc
 
 ## 📸 Preview
 
-> ![Preview](rest-preview.png)
+<img src="rest-preview.png" alt="Preview" style="width: 100%; height: auto;" />
 
 ## 🚀 Funcionalidades
 
