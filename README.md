@@ -6,6 +6,11 @@ Aplicação web feita com React que consome a [REST Countries API](https://restc
 
 <img src="rest-preview.png" alt="Preview" style="width: 100%; height: auto;" />
 
+## 🌐 Site ao vivo
+
+[Veja o projeto funcionando aqui](https://silas310-rest-countries.netlify.app/)
+
+
 ## 🚀 Funcionalidades
 
 - Busca dinâmica por nome de país
