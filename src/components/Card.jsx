@@ -19,3 +19,5 @@ function Card({ flag, altFlag, name, population, region, capital }) {
     </section>
   );
 }
+
+export default Card;
